@@ -1,0 +1,664 @@
+/* ------ Général ------ */
+
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200&family=Source+Sans+3:ital,wght@1,300&display=swap');
+
+/* Installation des polices*/
+
+*{box-sizing: border-box;}
+
+.container{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* ------- Theme -------- */
+/* Couleurs */
+.palette {
+	color: #F3F7F3; /* Teintes claires - Utilisez cette couleur comme arrière-plan pour vos conceptions sombres sur clair, ou la couleur du texte d'une conception inversée. */
+	color: #8594A9; /* Accent léger - Les couleurs d'accent peuvent être utilisées pour attirer l'attention sur les éléments de conception en contrastant avec le reste de la palette.*/
+	color: #F4592F; /* Couleur principale de la marque - Cette couleur doit être accrocheuse mais pas dure. Il peut être appliqué généreusement à votre mise en page en tant qu'identité principale.*/
+	color: #BB3C51; /* Touche sombre - Une autre couleur d'accent à considérer. Il n'est pas nécessaire d'utiliser toutes les couleurs - parfois, un schéma de couleurs simple fonctionne mieux.*/
+	color: #676B72; /* Nuances sombres - Utilisez-le comme couleur de texte pour les motifs sombres sur clair ou comme arrière-plan pour les motifs inversés.*/
+}
+
+.fond-couleur-marque {
+	background-color: #F4592F;
+	color: #F3F7F3;
+}
+.theme-sombre {
+	background-color: #676B72;
+	color: #F3F7F3;
+}
+.theme-sombre a {
+	color: #8594A9;
+}
+
+.theme-clair {
+	background-color: #8594A9;
+	color: #201520;
+}
+
+/* Style Général */
+body {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	color: #333;
+	line-height: 1.5;
+	font-size: 1.1rem;
+	padding: 0 1rem;
+	margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "Source Sans 3";
+	font-weight: bold;
+	font-style: italic;
+	color: #0F4A81;
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	margin-top: 1.5rem;
+}
+
+.invisible {
+	display: none;
+}
+
+.flex-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+  
+/* menu de navigation*/
+nav li {
+	display: inline;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	border-radius: 30% 0%;
+	border: 1px solid #0F4A81;	
+	font-weight: bold;
+}
+
+nav li a{
+	display: inline-block;
+	color: #0F4A81;
+}
+
+nav li:hover{
+	border: 1px solid #0F4A81;	
+	background-color: rgb(135,206,235,0.7);
+}
+
+.lien-active {
+	border-radius: 30% 0%;
+	border: 1px solid #0F4A81;	
+	background-color: rgb(135,206,235,0.7);
+}
+
+/* Banniere */
+.bannier{
+	margin:2rem 0;
+}
+
+.bannier video {
+	width: 100%;
+	max-height: 600px;
+	object-fit: none;
+}
+
+/*breadcrumb*/
+.breadcrumb {
+	padding: 0 1rem;
+	margin-bottom: 1rem;
+	margin-left: 5rem;
+}
+  
+.breadcrumb ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.breadcrumb a {
+	color: #333;
+}
+.breadcrumb span {
+	padding: 1rem;
+} 
+
+/*Titre catalogue*/
+.titre-catalogue{
+	text-align: center;
+	text-transform: capitalize;
+}
+
+/*Gride*/	
+.grid-area {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+}
+
+.grid-area img, .grid-area video{
+	width: 100%;
+	height: 100%;
+}
+
+.grid-area img {
+	object-fit: cover;
+	object-position: center top;
+}
+
+.grid-area video{
+	object-fit: none;
+}
+
+.fusionne-2col-2row {
+	grid-column: 2 span;
+	grid-row: 2 span;
+}
+
+.fusionne-2col {
+	grid-column: 2 span;
+}
+
+.fusionne-2row {
+	grid-row: 2 span;
+}
+
+/*Card*/
+.card {
+	text-align: center;
+	border: 1px solid #0F4A81;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card-img {
+	height: 380px;
+} 
+
+.card-img img {
+	width: 100%;
+	height: 100%;
+} 
+
+.card-content {
+	padding: 0.5rem;
+}
+
+.card-title {
+	color: #0F4A81;
+	font-weight:bold;
+	font-size: 1.5rem;
+}
+
+.prix {
+	color: #0F4A81;
+	font-weight: 700;
+	font-size: 1.5rem;
+	font-style: italic;
+}
+
+.card-btn {
+	background-color: #0F4A81;
+	color: #fff;
+	border-radius: 20px;
+	padding: 0.2rem;
+	margin: 1rem;
+}
+
+.card:hover{
+	box-shadow: 10px 15px 15px rgb(135,206,235,0.8);
+}
+
+/*Autres propriétés CSS*/
+.video-concour {
+	width: 40%;
+	padding: 0.5rem;
+	height: 230px;
+}
+
+.video-concour video {
+	padding: 0.5rem;
+	margin: 0 3rem 0 2rem;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.col-1 {
+	width: 29%;
+}
+
+.col-3 {
+	width: 69%;
+}
+
+/*Formulaire */
+
+.grid-2-column {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.form-box {
+	background-color: rgb(135,206,235,0.7);
+	box-shadow: 30px 15px 15px #0F4A81;
+	border: solid 1px rgb(135,206,235,0.7);
+	margin-bottom: 2rem;
+	padding: 2rem;
+	color: #333;
+}
+
+.form-box > p {
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}
+
+fieldset > legend {
+	font-weight:bold;
+	font-style: oblique;
+	padding: 0.5rem;
+	text-transform: uppercase;
+}
+
+fieldset > div > input, select {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+input[type=radio],input[type=checkbox] {
+	display: inline-block;
+	margin: 2rem 0.5rem;
+}
+
+fieldset span {
+	color: red;
+	font-weight:bold;
+}
+
+.input-inline-block {
+	display: inline-block;
+	margin-bottom: 1rem;
+}
+
+input[type=text],input[type=email],input[type=date], input[type=tel],input[type=number]{
+	width: 90%;
+	height: 30px;
+	font-weight: bold;
+}
+
+input:focus, textarea:focus{
+	box-shadow: 0 0 4px 4px rgb(193, 188, 188);
+}
+
+textarea {
+	width: 93%;
+	height: 100px;
+	font-weight: bold;
+	margin-top: 0.5rem;
+}
+
+select {
+	width: 90%;
+	height: 30px;
+}
+
+.form-btn {
+	margin-top: 1rem;
+	text-align: center;
+}
+
+input[type=submit]{
+	border: 1.5px solid #0F4A81;
+	border-radius: 10px;
+	width: 40%;
+	height: 35px;
+	font-weight:bold;
+	cursor: pointer;
+	background-color: rgb(193, 188, 188);
+}
+
+/* Slogan */
+.slogan {
+	background-color: rgb(135,206,235,0.7);
+	text-align: center;
+	font-size: 6rem;
+	font-weight:bold;
+	font-style: oblique;
+}
+
+.slogan-concour {
+	margin:2rem 0 2rem 0;
+	width: 57%;
+	height: 205px;
+	box-shadow: 30px 15px 15px rgb(135,206,235,0.7);
+}
+
+.slogan-concour p{
+	text-align: center;
+	font-size: 3rem;
+	font-weight:bold;
+	font-style: oblique;
+	color: #fff;
+}
+
+/*Panier*/ 
+.panier > li {
+	font-weight: bold;
+	font-size:35px;
+	list-style-image: url('../img/drone-icon.png');
+	margin: 1.5rem;
+}
+
+ul.panier li > ul > li {
+	background-color: rgb(135,206,235,0.7);
+	margin: 0.5rem 0;
+	margin-left: 1.5rem;
+	padding: 0.5rem;
+	list-style: none;
+	font-size:medium;
+	font-weight: 200;
+}
+
+.facture {
+	background-color: rgb(135,206,235,0.7);
+	padding: 0.1rem 1.5rem;
+	margin-top: 0.5rem;
+}
+
+.facture ul, main ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.sous-total, .total, .facture p {
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+aside > p {
+	background-color: #0F4A81;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/* footer */
+footer {
+	background-color: #0F4A81;
+	color: #fff;
+	padding: 1rem 2.5rem;
+	margin-top: 2rem;
+}
+
+footer a {
+	color: #fff;
+}
+
+footer.concour {
+	margin-top:0;
+}
+
+.show-on-mobile {
+	display: none;
+}
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+@media screen and (max-width: 1200px) {
+    body:before {
+        content: "Écran MEDIUM (portable)";
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        background-color: #0F4A81;
+        color: #f6f5ec;
+    }
+
+	.grid-area {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.fusionne-2col-2row {
+		grid-column: 3 span;
+		grid-row: 3 span;
+	}
+	
+	.fusionne-2col {
+		grid-column: 1 span;
+		grid-row-start: 6;
+	}
+	
+	.fusionne-2row {
+		grid-row: 1 span;
+		grid-row-start: 2;
+	}
+
+	.card-img {
+		height: 550px;
+	} 
+
+	.grid-2-column {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	input[type=text],input[type=email],input[type=date], input[type=tel],input[type=number]{
+		width: 100%;
+	}
+	
+	textarea {
+		width: 100%;
+	}
+	
+	select {
+		width: 100%;
+	}
+	
+	input[type=submit]{
+		width: 50%;
+	}
+
+	.slogan-concour {
+		margin-left: 3rem;
+		height: 190px;
+		width: 70%;
+	}
+	
+	.video-concour {
+		height: 200px;
+		padding: 0;
+	}
+
+	.fusionne-2col-2row video, .fusionne-2col video {
+		object-fit: cover;
+	}
+}
+
+@media screen and (max-width: 960px) {
+    body:before {
+        content: "Écran SMALL (tablette)";
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        background-color: #0F4A81;
+        color: #f6f5ec;
+    }
+
+	.grid-area {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.fusionne-2col-2row {
+		grid-column: 2 span;
+		grid-row: 1 span;
+	}
+
+	.fusionne-2col {
+		grid-column: 1 span;
+		grid-row-start: 4;
+	}
+
+	.fusionne-2row {
+		grid-row: 1 span;
+		grid-row-start: 7;
+	}
+
+	.grid-isole {
+		grid-row-start: 8;
+	}
+	
+	.card-img {
+		height: 550px;
+	} 
+
+	.slogan-concour {
+		margin-left: 3rem;
+		height: 170px;
+		width: 60%;
+	}
+	.slogan-concour p{
+		font-size: 2rem;
+	}
+	.video-concour {
+		height: 200px;
+		padding: 0;
+	}
+
+	.col-1 {
+		width: 49%;
+	}
+	
+	.col-3 {
+		width: 49%;
+	}
+
+	.hide-on-mobile {
+		display: none;
+	}
+
+	.show-on-mobile {
+		display: block !important;
+	}
+	
+	.fusionne-2col-2row video, .fusionne-2col video {
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+@media screen and (max-width: 570px) {
+    body:before {
+        content: "Écran XSMALL (téléphone)";
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        background-color: #0F4A81;
+        color: #f6f5ec;
+    }
+	
+	.grid-area, footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.slogan {
+		font-size: 3rem;
+	}
+
+	.card-img {
+		height: 600px;
+	} 
+	
+	input[type=radio],input[type=checkbox] {
+		margin: 0.5rem 0.5rem;
+	}
+	
+	.theme-sombre .flex-box {
+		flex-direction: column;
+		justify-content: space-between;
+	} 
+
+	.video-concour {
+		width: 100%;
+		height: 250px;
+		margin-top: 1rem;
+		border: 1px solid #ffF;
+		display: flex;
+		justify-content: center;
+	}
+
+	.video-concour video {
+		object-fit: none;
+		object-position: center;
+		padding-left: 1.5rem;
+	}
+	
+	.slogan-concour {
+		margin: 2rem 0 2rem 0;
+		width: 100%;
+		height: 150px;
+	}
+	
+	.slogan-concour p{
+		font-size: 2rem;
+	}
+
+	.pannier-facture-mobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.col-3 {
+		width: 100%;
+	}
+
+	.col-1 {
+		width: 100%;
+	}
+
+	.hide-on-mobile {
+		display: none;
+	}
+
+	.show-on-mobile {
+		display: block !important;
+	}
+
+	.fusionne-2col-2row video, .fusionne-2col video {
+		object-fit: contain;
+		object-position: center;
+	}
+
+	.format-mobile {
+		flex-direction: column !important;
+		margin-bottom: 0.5rem;
+	}
+}
+
+@media print {
+	footer , header {
+		display: none;
+	}
+}

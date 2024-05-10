@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>SkyPixel-Drones</title>
+    <meta name="description"
+        content="Explorez le ciel avec SkyPixel Drones, votre destination ultime pour les passionnés de drones. Parcourez notre vaste sélection de drones de haute qualité, des modèles pour débutants aux appareils professionnels. Avec des marques de confiance et un service client exceptionnel, nous rendons l'expérience du vol à portée de main.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css" media="all">
+    <link rel="stylesheet" href="css/styles.css" media="all">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex-box">
+                <a href="index.html">
+                    <img src="img/logo-large.png" alt="Logo du site" class="hide-on-mobile">
+                    <img src="img/logo-petit.png" alt="Logo du site" class="show-on-mobile">
+                </a>
+                <ul class="hide-on-mobile">
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li class="lien-active"><a href="commande.html">Commande</a></li>
+                    <li><a href="panier.html">Panier</a></li>
+                </ul>
+                <img src="img/hamburger_icon.svg" alt="Menu pour le mobile" class="show-on-mobile">
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Commande</h1>
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="commande.html">Commande</a><span>→</span></li>
+                    <li>Valider votre commande</li>
+                </ul>
+            </div>
+            <div class="form-box">
+                <p>Les * signifient que le champ est obligatoire</p>
+                <form action="confirmation.html">
+                    <div class="grid-2-column">
+                        <fieldset>
+                            <legend>Informations personnelles</legend>
+                            <div>
+                                <label for="textNom">Nom <span>*</span> </label>
+                                <input type="text" name="textNom" id="textNom" required>
+                            </div>
+                            <div>
+                                <label for="textPrenom">Prénoms <span>*</span> </label>
+                                <input type="text" name="textPrenom" id="textPrenom" required>
+                            </div>
+                            <div>
+                                <label for="textEmail">E-mail <span>*</span> </label>
+                                <input type="email" name="textEmail" id="textEmail" required>
+                            </div>
+                            <div>
+                                <label for="textDateNaissanse">Date de naissance <span>*</span> </label>
+                                <input type="date" name="textDateNaissanse" id="textDateNaissanse" required>
+                            </div>
+                            <div>
+                                <label for="textTel">Contact <span>*</span></label>
+                                <input type="tel" name="textTel" id="textTel" required>
+                            </div>
+                            <div>
+                                <label for="telephone_preference">Préférence communication <span>*</span> :</label>
+                                <input type="radio" name="preference" id="telephone_preference" value="Telephone"
+                                    required>
+                                <label for="telephone_preference">Téléphone</label>
+
+                                <input type="radio" name="preference" id="texto_preference" value="Texto">
+                                <label for="texto_preference">Texto</label>
+
+                                <input type="radio" name="preference" id="courriel_preference" value="Courriel">
+                                <label for="courriel_preference">Courriel</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Informations d'adresse</legend>
+                            <div class="flex-box format-mobile">
+                                <div class="input-inline-block col-1">
+                                    <label for="textApp">No Appt.</label>
+                                    <input type="text" name="textApp" id="textApp">
+                                </div>
+                                <div class="input-inline-block col-3">
+                                    <label for="textNomRue">Numéro et nom de la rue <span>*</span> </label>
+                                    <input type="text" name="textNomRue" id="textNomRue" required>
+                                </div>
+                            </div>
+                            <div class="flex-box format-mobile">
+                                <div class="input-inline-block col-1">
+                                    <label for="textCodePost">Code postal <span>*</span></label>
+                                    <input type="text" name="textCodePost" id="textCodePost" required>
+                                </div>
+                                <div class="input-inline-block col-3">
+                                    <label for="textVille">Ville <span>*</span></label>
+                                    <input type="text" name="textVille" id="textVille" required>
+                                </div>
+                            </div>
+                            <div class="flex-box format-mobile">
+                                <div class="input-inline-block col-1">
+                                    <label for="textParticipant">Participants <span>*</span></label>
+                                    <input type="number" max="4" min="1" name="textParticipant" id="textParticipant"
+                                        required>
+                                </div>
+                                <div class="col-3">
+                                    <label for="heureSeance"> Heure de séance <span>*</span></label>
+                                    <select name="heureSeance" id="heureSeance" required>
+                                        <option value=""> Sélectionner une plage </option>
+                                        <option value="9h30-12h00">9 h 30 à 12 h 00</option>
+                                        <option value="13h30-16h00">13 h 30 à 16 h 00</option>
+                                        <option value="19h30-21h00">19 h 30 à 21 h 00</option>
+                                        <option value="21h30-00h00"> 21 h 30 à 00 h 00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="textCommentaire">Commentaire supplémentaire</label>
+                                <textarea name="textCommentaire" id="textCommentaire" maxlength="150"></textarea>
+                            </div>
+                            <div>
+                                <label for="infolettre">S’inscrire à l’infolettre</label>
+                                <input type="checkbox" name="infolettre" id="infolettre" value="infolettre">
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-btn">
+                        <input type="submit" id="Envoyer" value=" Confirmation de votre commande">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="theme-sombre">
+            <div class="flex-box container">
+                <div class="video-concour">
+                    <video loop autoplay muted>
+                        <source src="medias/drone.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="slogan-concour theme-clair">
+                    <p>
+                        CONCOURS <br> Gagné ta formation de pilotage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="flex-box concour">
+        <address>
+            SkyPixelDrones : 1225, rue des Forces spéciales
+        </address>
+        <p>
+            Réalisé par : Amadou KOUYAT&Eacute;
+        </p>
+        <a href="tel:+18546669995">+1 854 666 9995</a>
+    </footer>
+</body>
+
+</html>
